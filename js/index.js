@@ -1,6 +1,6 @@
 let locais = []
 let links = []
-let url;
+let url
 
 fetch('/data/locais.json')
     .then(response => {
