@@ -2,7 +2,7 @@ let locais = []
 let links = []
 let url
 
-fetch('/data/locais.json')
+fetch('data/locais.json')
     .then(response => {
         if(!response.ok) {
             throw new Error('Erro - Locais')
@@ -13,7 +13,7 @@ fetch('/data/locais.json')
         locais = data
     })
 
-fetch('/data/links.json')
+fetch('data/links.json')
     .then(response => {
         if(!response.ok){
             throw new Error('Erro - Link')
