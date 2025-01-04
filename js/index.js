@@ -4,7 +4,7 @@ let dadosCarregados = false;
 
 // Função para carregar os dados
 function carregarDados() {
-    const carregarLanchonetes = fetch('/data/locais.json')
+    const carregarLanchonetes = fetch('./data/locais.json')
         .then(response => response.json())
         .then(data => {
             lanchonetes = Object.values(data);
@@ -13,7 +13,7 @@ function carregarDados() {
             console.error('Erro ao carregar dados de lanchonetes:', error);
         });
 
-    const carregarLinks = fetch('/data/links.json')
+    const carregarLinks = fetch('./data/links.json')
         .then(response => response.json())
         .then(data => {
             links = Object.values(data);
@@ -23,20 +23,24 @@ function carregarDados() {
         });
 
     // Garante que os dados sejam carregados antes de ativar o sorteio
-    Promise.all([carregarLanchonetes, carregarLinks]).then(() => {
-        if (lanchonetes.length > 0 && links.length > 0) {
-            dadosCarregados = true;
-            console.log('Dados carregados com sucesso!');
-        } else {
-            console.error('Os dados não foram carregados corretamente.');
-        }
-    });
+    Promise.all([carregarLanchonetes, carregarLinks])
+        .then(() => {
+            if (lanchonetes.length > 0 && links.length > 0) {
+                dadosCarregados = true;
+                console.log('Dados carregados com sucesso!');
+            } else {
+                console.error('Os dados não foram carregados corretamente.');
+            }
+        })
+        .catch(() => {
+            console.error('Erro ao carregar os dados.');
+        });
 }
 
 // Função para sortear
 function Sortear() {
     if (!dadosCarregados) {
-        console.error('Os dados ainda não foram carregados. Tente novamente mais tarde.');
+        alert('Os dados ainda não foram carregados. Tente novamente mais tarde.');
         return;
     }
 
@@ -47,10 +51,9 @@ function Sortear() {
     linkElement.href = links[numeroSorteado];
     linkElement.innerText = lanchonetes[numeroSorteado];
     linkElement.target = "_blank"; // Abre o link em nova aba
-     // Opcional: Estiliza o link
 
     // Limpa o conteúdo anterior e adiciona o novo link
-    respElement.innerHTML = " ";
+    respElement.innerHTML = "";
     respElement.appendChild(linkElement);
 }
 
