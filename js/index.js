@@ -33,7 +33,6 @@ const lanchonetes = [
 ]
 
 const links = [
-    [
         "https://www.instagram.com/mackmellonslanches",
         "https://www.instagram.com/lancheriapelotense/?hl=pt",
         "https://www.sanatalanches.com.br/",
@@ -66,7 +65,7 @@ const links = [
         "https://www.instagram.com/revoada_lanchesedrinks/",
         "https://www.instagram.com/atenalanches/"
     ]
-]
+
 
 function Sortear() {
     if (lanchonetes.length === 0 || links.length === 0) {
@@ -76,7 +75,7 @@ function Sortear() {
 
     const numeroSorteado = Math.floor(Math.random() * lanchonetes.length);
     const respElement = document.getElementById('resp');
-    const linkElement = document.createElement('a'); // Cria dinamicamente o link
+    const linkElement = document.getElementById('linkElement')
 
     linkElement.href = links[numeroSorteado];
     linkElement.innerText = lanchonetes[numeroSorteado];
