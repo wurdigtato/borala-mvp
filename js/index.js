@@ -4,7 +4,7 @@ let dadosCarregados = false;
 
 // Função para carregar os dados
 function carregarDados() {
-    const carregarLanchonetes = fetch('../data/locais.json')
+    const carregarLanchonetes = fetch('/data/locais.json')
         .then(response => response.json())
         .then(data => {
             lanchonetes = Object.values(data);
@@ -13,7 +13,7 @@ function carregarDados() {
             console.error('Erro ao carregar dados de lanchonetes:', error);
         });
 
-    const carregarLinks = fetch('../data/links.json')
+    const carregarLinks = fetch('/data/links.json')
         .then(response => response.json())
         .then(data => {
             links = Object.values(data);
