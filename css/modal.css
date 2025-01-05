@@ -1,3 +1,4 @@
+
 .fade {
     position: fixed;
     top: 0;
@@ -25,7 +26,6 @@
     color: var(--neutral-white);
     scale: 96%;
 }
-
 
 .modal-sobre h2 {
     font-weight: 700;
@@ -59,7 +59,7 @@
     from{
         opacity: 0;
     }
-
+    
     to {
         opacity: 1;
     }
@@ -190,5 +190,16 @@
     color: var(--neutral-white);
 }
 
+@media (max-width: 768px){
+    .modal-sobre{
+        width: 400px;
+    }
+    .modal-como{
+        width: 400px;
+    }
 
+    .modal-como h4 {
+        font-size: 0.9rem;
+    }
 
+}
