@@ -7,6 +7,7 @@
     <title>Bora Lá - Rolê garantido, Escolha simplificada!</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/modal.css">
     <script src="js/index.js" defer></script>
 </head>
 <body>
@@ -18,6 +19,52 @@
         </div>
         <p class="resp" id="resp">Bora Lá?</p>
         <button class="btnSortear" id="btnSortear" onclick="Sortear()">Sortear</button>
+        <div class="info">
+            <a href="#" id="btn-sobre">Sobre</a>
+            <a href="#" id="btn-como-usar">Como usar?</a>
+        </div>
+        <div class="fade" id="fade-sobre"></div>
+        <div class="fade" id="fade-como"></div>
+        <div class="modal-sobre" id="modal-sobre">
+            <h2><span class="destaque-modal">Sobre o </span>Bora lá<span class="destaque-modal">!</span></h2>
+            <div class="sobre-content">
+                <h3>Elimine a indecisão com um <span class="destaque-offset">clique</span>!</h3>
+                <p>O BoraLá nasceu para acabar com aquela eterna indecisão na hora de <span class="destaque-offset">escolher onde comer</span>. Seja com seu grupo de amigos ou sozinho, a nossa plataforma transforma o processo de escolha em algo simples, rápido e <span class="destaque-offset">divertido</span>.</p>
+                <p>Esqueça as longas pesquisas e análises intermináveis. Aqui, tudo o que você precisa fazer é apertar um <span class="destaque-offset">botão</span> e deixar o destino surpreender você! </p>
+                <p>O BoraLá prioriza a praticidade e a diversão, criando uma experiência interativa que combina leveza e espontaneidade.</p>
+                <div class="aviso">
+                    <p>BoraLá está em versão beta, a aplicação contém diversas lanchonetes da cidade de Pelotas/RS.</p>
+                    <p>Em breve, mais funções e localizações</p>
+                </div>
+
+                <h5><span class="destaque-modal">Bora Lá</span> encontrar seu próximo destino <span class="destaque-offset">favorito!</span></h5>
+                <p class="signature">Desenvolvido por <a href="">Tácio Würdig</a></p>
+            </div>
+            <div class="close-btn"><a href="#" id="close-sobre"><i>x</i>fechar</a></div>
+        </div>
+
+        <div class="modal-como" id="modal-como-usar">
+            <h2>Como usar o <span class="destaque-modal">Bora Lá?</span></h2>
+            
+            <div class="como-content">
+                <div class="como-btn">
+                    <p>Clique no Botão <span class="destaque-modal">Sortear</span></p>
+                    <img src="images/how-btn.png" alt="">
+                    <p>E deixe o Bora Lá decidir por você!</p>
+                </div>
+                <div>
+                    <h3>Curtiu o resultado?</h3>
+                    <p><span class="destaque-offset">Clique no nome</span> da lancheria para saber mais e acessar o site ou instragram da lancheria</p>
+                </div>
+                <div>
+                    <h3>Caiu um lugar que você não curtiu?</h3>
+                    <p> <span class="destaque-offset">Sem probremas!</span> Clique de novo e descubra uma nova opção</p>
+                </div>
+            </div>
+            <h4>Rádido, Fácil e sem briga com os amigos! <span class="destaque-modal">Bora Lá</span>?</h4>
+            <div class="close-btn"><a href="#" id="close-como"><i>x</i>fechar</a></div>
+        </div>
+
     </main>
 </body>
 </html>
