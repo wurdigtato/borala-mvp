@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
-@media (max-width: 768px) {
-    body{
-        overflow: hidden;
-    }
-    .container {
-        margin: 0 10px;
-    }
-}
-
-
 :root {
     --primary-color: #FC5404;
     --secondary-color: #FF9989;
@@ -25,7 +14,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Inter, sans-serif;
-
+    
 }
 
 body {
@@ -45,7 +34,7 @@ body::after {
     height: 100%;
     background-image: url('../images/backgroundimage.svg');
     background-repeat: repeat;
-    background-size: c;
+    background-size: contain;
     z-index: -1;
     opacity: 0.4;
 }
@@ -123,4 +112,13 @@ body::after {
 
 .info > a:hover {
     color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    body{
+        overflow: hidden;
+    }
+    .container {
+        margin: 0 10px;
+    }
 }
